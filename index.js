@@ -192,6 +192,8 @@ function download(filename, text) {
       indexDown.push(finalStats[x].downTime);
       indexUp.push(finalStats[x].upTime);
     }
+    indexDown.sort(function(a, b){return a - b});
+    indexUp.sort(function(a, b){return a - b});
     
     duTime = finalStats["dot"].upTime-finalStats["dot"].downTime;
     fileText += duTime;
@@ -199,7 +201,7 @@ function download(filename, text) {
     for(var i = 1; i < 12; i++)
     {
       ddTime = indexDown[i]-indexDown[i-1];
-      udTime = indexUp[i]-indexDown[i-1];
+      udTime = indexDown[i]-indexUp[i-1];
       uuTime = indexUp[i]-indexUp[i-1];
       duTime = indexUp[i]-indexDown[i];
       fileText += ','+ddTime;
