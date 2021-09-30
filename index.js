@@ -214,9 +214,9 @@ function download(filename, text) {
       duTotal += duTime;
     }
     var avgDD = ddTotal/11;
-    var avgUD = udTime/11;
-    var avgUU = uuTime/11;
-    var avgDU = duTime/12;
+    var avgUD = udTotal/11;
+    var avgUU = uuTotal/11;
+    var avgDU = duTotal/12;
     fileText += ','+avgDD;
     fileText += ','+avgUD;
     fileText += ','+avgUU;
