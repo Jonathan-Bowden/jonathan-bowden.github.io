@@ -63,6 +63,7 @@ function logKeyDown(e) {
     case 190:// .
       log.innerHTML += "<br>"+e.key+" "+timeString;
       finalStats["dot"].downTime = timeInt;
+      startTime = timeInt;
       break;
     case 84://74:// t
       log.innerHTML += "<br>"+e.key+" "+timeString;
@@ -166,6 +167,7 @@ function logKeyUp(e) {
     case 13:// enter
       log.innerHTML += "<br>"+e.key+" "+timeString;
       finalStats["enter"].upTime = timeInt;
+      endTime = timeInt;
       download("data.csv",fileText);
       break;
   }
@@ -178,8 +180,8 @@ function download(filename, text) {
   var attempt = document.getElementById("pwrd");
   if (attempt.value == pwd)
   {
-    var ddTotal, duTotal, udTotal, uuTotal = 0;
-    var ddTime, duTime, udTime, uuTime = 0;
+    var ddTotal = 0, duTotal = 0, udTotal = 0, uuTotal = 0;
+    var ddTime = 0, duTime = 0, udTime = 0, uuTime = 0;
 
     //finalStats.array.forEach(element => {
     //  fileText+=element.letter;
@@ -192,7 +194,7 @@ function download(filename, text) {
     }
     
     duTime = finalStats["dot"].upTime-finalStats["dot"].downTime;
-    fileText += ','+duTime;
+    fileText += duTime;
     duTotal += duTime;
     for(var i = 1; i < 12; i++)
     {
@@ -212,11 +214,13 @@ function download(filename, text) {
     var avgDD = ddTotal/11;
     var avgUD = udTime/11;
     var avgUU = uuTime/11;
-    var avgDU =duTime/11;
+    var avgDU = duTime/12;
     fileText += ','+avgDD;
     fileText += ','+avgUD;
     fileText += ','+avgUU;
     fileText += ','+avgDU;
+    fileText += ','+(endTime-startTime);
+    fileText += ','+startTime;
     //finalStats.foreach(x => );
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileText));
