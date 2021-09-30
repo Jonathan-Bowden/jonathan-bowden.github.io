@@ -55,164 +55,122 @@ function logKey(e) {
 
 function logKeyDown(e) {
   var d = new Date();
-  var timeDown = d.getTime();
+  var timeInt = d.getTime();
+  var timeString = d.toLocaleString();
 
   switch(e.keyCode)
   {
     case 190:// .
-      log.innerHTML += "<br>"+e.key;
-      finalStats["dot"].keyDown = timeDown;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["dot"].downTime = timeInt;
       break;
     case 84://74:// t
-      log.innerHTML += "<br>"+e.key;
-      finalStats["t"].keyDown = timeDown;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["t"].downTime = timeInt;
       break;
     case 73://105:// i
-      log.innerHTML += "<br>"+e.key;
-      finalStats["i"].keyDown = timeDown;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["i"].downTime = timeInt;
       break;
     case 69://101:// e
-      log.innerHTML += "<br>"+e.key;
-      finalStats["e"].keyDown = timeDown;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["e"].downTime = timeInt;
       break;
     case 53:// 5
-      log.innerHTML += "<br>"+e.key;
-      finalStats["5"].keyDown = timeDown;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["5"].downTime = timeInt;
       break;
     case 16://114:// shift
-      log.innerHTML += "<br>"+e.key;
-      finalStats["shift"].keyDown = timeDown;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["shift"].downTime = timeInt;
       break;
     case 82:// R
-      log.innerHTML += "<br>"+e.key;
-      finalStats["R"].keyDown = timeDown;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["R"].downTime = timeInt;
       break;
     case 79://111:// o
-      log.innerHTML += "<br>"+e.key;
-      finalStats["o"].keyDown = timeDown;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["o"].downTime = timeInt;
       break;
     case 78://110:// n
-      log.innerHTML += "<br>"+e.key;
-      finalStats["n"].keyDown = timeDown;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["n"].downTime = timeInt;
       break;
     case 65://97:// a
-      log.innerHTML += "<br>"+e.key;
-      finalStats["a"].keyDown = timeDown;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["a"].downTime = timeInt;
       break;
     case 76://108:// l
-      log.innerHTML += "<br>"+e.key;
-      finalStats["l"].keyDown = timeDown;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["l"].downTime = timeInt;
       break;
     case 13:// enter
-      log.innerHTML += "<br>"+e.key;
-      finalStats["enter"].keyDown = timeDown;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["enter"].downTime = timeInt;
       break;
   }
-
-  //var keyStat = keyStats.find(function(post, index) {
-  //  if(post.title == e.key)
-  //  {
-  //    return post;
-  //  }
-  //});
-//
-  //if(keyStat != null)
-  //{
-  //  if(keyStat.lastPress != null)
-  //  {
-  //    keyStats += keyStat.lastPress;
-  //  }
-  //}
-  //else
-  //{
-  //  keyStat = {"keyPressed":e.key, "keyDown":e.keyDown, "keyUp":e.keyUp}
-  //}
-  ////log.innerHTML += "<br>"+e.keyCode;
-  //log.innerHTML += "<br>"+e.key;
-  fileText += ','+e.key;
+  //fileText += ','+e.key;
 }
 
 function logKeyUp(e) {
   var d = new Date();
-  var timeUp = d.getTime();
-  //var fs = require('fs');
-  //var filepath = 'data.json';
-  //var docFile = document.open("")
-  //var keyStat = keyStats.find(function(post, index) {
-  //  if(post.title == e.key)
-  //  {
-  //    //document.write('newLine\n');
-  //    //fs.write(filepath, content, 'a');
-  //    return post;
-  //  }
-  //});
-
-  //if(keyStat != null)
-  //{
-  //  if(keyStat.lastPress != null)
-  //  {
-  //    keyStats += keyStat.lastPress;
-  //  }
-  //}
-  //else
-  //{
-  //  keyStats += {"keyPressed":e.key, "keyDown":e.keyDown, "keyUp":e.keyUp}
-  //}
+  var timeInt = d.getTime();
+  var timeString = d.toLocaleString();
 
   switch(e.keyCode)
   {
     case 190:// .
-      log.innerHTML += "<br>"+e.key;
-      finalStats["dot"].keyDown = timeUp;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["dot"].upTime = timeInt;
       break;
     case 84://74:// t
-      log.innerHTML += "<br>"+e.key;
-      finalStats["t"].keyDown = timeUp;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["t"].upTime = timeInt;
       break;
     case 73://105:// i
-      log.innerHTML += "<br>"+e.key;
-      finalStats["i"].keyDown = timeUp;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["i"].upTime = timeInt;
       break;
     case 69://101:// e
-      log.innerHTML += "<br>"+e.key;
-      finalStats["e"].keyDown = timeUp;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["e"].upTime = timeInt;
       break;
     case 53:// 5
-      log.innerHTML += "<br>"+e.key;
-      finalStats["5"].keyDown = timeUp;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["5"].upTime = timeInt;
       break;
     case 16://114:// shift
-      log.innerHTML += "<br>"+e.key;
-      finalStats["shift"].keyDown = timeUp;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["shift"].upTime = timeInt;
       break;
     case 82:// R
-      log.innerHTML += "<br>"+e.key;
-      finalStats["R"].keyDown = timeUp;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["R"].upTime = timeInt;
       break;
     case 79://111:// o
-      log.innerHTML += "<br>"+e.key;
-      finalStats["o"].keyDown = timeUp;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["o"].upTime = timeInt;
       break;
     case 78://110:// n
-      log.innerHTML += "<br>"+e.key;
-      finalStats["n"].keyDown = timeUp;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["n"].upTime = timeInt;
       break;
     case 65://97:// a
-      log.innerHTML += "<br>"+e.key;
-      finalStats["a"].keyDown = timeUp;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["a"].upTime = timeInt;
       break;
     case 76://108:// l
-      log.innerHTML += "<br>"+e.key;
-      finalStats["l"].keyDown = timeUp;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["l"].upTime = timeInt;
       break;
     case 13:// enter
-      log.innerHTML += "<br>"+e.key;
-      finalStats["enter"].keyDown = timeUp;
+      log.innerHTML += "<br>"+e.key+" "+timeString;
+      finalStats["enter"].upTime = timeInt;
       download("hello.csv",fileText);
       break;
   }
 
-  fileText += ','+e.key;
+  //fileText += ','+e.key;
   //log.innerHTML += "<br>"+e.keyCode;
 }
 
@@ -220,8 +178,48 @@ function download(filename, text) {
   var attempt = document.getElementById("pwrd");
   if (attempt.value == pwd)
   {
+    var ddTotal, duTotal, udTotal, uuTotal = 0;
+    var ddTime, duTime, udTime, uuTime = 0;
+
+    //finalStats.array.forEach(element => {
+    //  fileText+=element.letter;
+    //});
+    var indexDown = [];
+    var indexUp = [];
+    for (var x in finalStats){
+      indexDown.push(finalStats[x].downTime);
+      indexUp.push(finalStats[x].upTime);
+    }
+    
+    duTime = finalStats["dot"].upTime-finalStats["dot"].downTime;
+    fileText += ','+duTime;
+    duTotal += duTime;
+    for(var i = 1; i < 12; i++)
+    {
+      ddTime = indexDown[i]-indexDown[i-1];
+      udTime = indexUp[i]-indexDown[i-1];
+      uuTime = indexUp[i]-indexUp[i-1];
+      duTime = indexUp[i]-indexDown[i];
+      fileText += ','+ddTime;
+      fileText += ','+udTime;
+      fileText += ','+uuTime;
+      fileText += ','+duTime;
+      ddTotal += ddTime;
+      udTotal += udTime;
+      uuTotal += uuTime;
+      duTotal += duTime;
+    }
+    var avgDD = ddTotal/11;
+    var avgUD = udTime/11;
+    var avgUU = uuTime/11;
+    var avgDU =duTime/11;
+    fileText += ','+avgDD;
+    fileText += ','+avgUD;
+    fileText += ','+avgUU;
+    fileText += ','+avgDU;
+    //finalStats.foreach(x => );
     var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileText));
     element.setAttribute('download', filename);
   
     element.style.display = 'none';
