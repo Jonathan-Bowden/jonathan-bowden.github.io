@@ -241,6 +241,12 @@ function download(filename, text) {
   }
 }
 
+window.onload = () => {
+  const myInput = document.getElementById('pwrd');
+  myInput.onpaste = e => e.preventDefault();
+  myInput.ondrop = e => e.preventDefault();
+}
+
 //document.getElementById("dwnld").addEventListener("click", function(){download("hello.csv",fileText);});
 
 document.onkeydown = logKeyDown;
