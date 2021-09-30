@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>COMP 4980 Behavioral Biometrics</title>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">data</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Type the password and press enter</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-			<label for="pword">Password:</label>
-				<input type="text" id="pword" name="pword">
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="center" id="login">
+      <h1>Password: ".tie5Ronal"</h1>
+      <label>Type the password and press enter.</label>
+      <input type="password" style="margin: 5px;"></input>
+      <button type="button" class="btn" id="dwnld"><i class="fa fa-download"></i> Download</button>
+    </div>
+  </div>
+  <!--<textarea cols="80" rows="20"></textarea>-->
+  <br>
+  <form method="get" action="data.json">
+    <!--<button type="submit" class="btn"><i class="fa fa-download"></i> Download</button>-->
+    <!--<a href="data.json" download="data.json">Download</a>-->
+    <!--<button type="submit">Download!</button>-->
+  </form>
+  <div id="log"></div>
+</body>
+<footer>
+<script src="index.js"></script>
+</footer>
 </html>
