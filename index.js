@@ -61,52 +61,52 @@ function logKeyDown(e) {
   switch(e.keyCode)
   {
     case 190:// .
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["dot"].downTime = timeInt;
       startTime = timeInt;
       break;
     case 84://74:// t
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["t"].downTime = timeInt;
       break;
     case 73://105:// i
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["i"].downTime = timeInt;
       break;
     case 69://101:// e
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["e"].downTime = timeInt;
       break;
     case 53:// 5
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["5"].downTime = timeInt;
       break;
     case 16://114:// shift
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["shift"].downTime = timeInt;
       break;
     case 82:// R
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["R"].downTime = timeInt;
       break;
     case 79://111:// o
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["o"].downTime = timeInt;
       break;
     case 78://110:// n
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["n"].downTime = timeInt;
       break;
     case 65://97:// a
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["a"].downTime = timeInt;
       break;
     case 76://108:// l
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["l"].downTime = timeInt;
       break;
     case 13:// enter
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["enter"].downTime = timeInt;
       break;
   }
@@ -121,51 +121,51 @@ function logKeyUp(e) {
   switch(e.keyCode)
   {
     case 190:// .
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["dot"].upTime = timeInt;
       break;
     case 84://74:// t
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["t"].upTime = timeInt;
       break;
     case 73://105:// i
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["i"].upTime = timeInt;
       break;
     case 69://101:// e
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["e"].upTime = timeInt;
       break;
     case 53:// 5
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["5"].upTime = timeInt;
       break;
     case 16://114:// shift
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["shift"].upTime = timeInt;
       break;
     case 82:// R
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["R"].upTime = timeInt;
       break;
     case 79://111:// o
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["o"].upTime = timeInt;
       break;
     case 78://110:// n
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["n"].upTime = timeInt;
       break;
     case 65://97:// a
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["a"].upTime = timeInt;
       break;
     case 76://108:// l
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["l"].upTime = timeInt;
       break;
     case 13:// enter
-      log.innerHTML += "<br>"+e.key+" "+timeString;
+      log.innerHTML += e.key+" "+timeString+"<br>";
       finalStats["enter"].upTime = timeInt;
       endTime = timeInt;
       download("data.csv",fileText);
