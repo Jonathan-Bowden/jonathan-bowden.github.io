@@ -166,7 +166,7 @@ function logKeyUp(e) {
     case 13:// enter
       log.innerHTML += "<br>"+e.key+" "+timeString;
       finalStats["enter"].upTime = timeInt;
-      download("hello.csv",fileText);
+      download("data.csv",fileText);
       break;
   }
 
