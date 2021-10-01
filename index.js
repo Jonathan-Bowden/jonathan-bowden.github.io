@@ -246,6 +246,9 @@ function download(filename, text) {
                   "n":{"letter":78, "downTime":null, "upTime":null}, "a":{"letter":65, "downTime":null, "upTime":null}, 
                   "l":{"letter":76, "downTime":null, "upTime":null}, "enter":{"letter":13, "downTime":null, "upTime":null}
     };
+    
+    startTime = null;
+    endTime = null;
   }
   else
   {
