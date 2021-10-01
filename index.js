@@ -234,6 +234,18 @@ function download(filename, text) {
     element.click();
   
     document.body.removeChild(element);
+    
+    
+    fileText = '';
+    textFile = null;
+    finalStats ={
+                  "dot":{"letter":190, "downTime":null, "upTime":null},"t":{"letter":84, "downTime":null, "upTime":null}, 
+                  "i":{"letter":73, "downTime":null, "upTime":null}, "e":{"letter":69, "downTime":null, "upTime":null}, 
+                  "5":{"letter":53, "downTime":null, "upTime":null}, "shift":{"letter":16, "downTime":null, "upTime":null}, 
+                  "R":{"letter":82, "downTime":null, "upTime":null}, "o":{"letter":79, "downTime":null, "upTime":null}, 
+                  "n":{"letter":78, "downTime":null, "upTime":null}, "a":{"letter":65, "downTime":null, "upTime":null}, 
+                  "l":{"letter":76, "downTime":null, "upTime":null}, "enter":{"letter":13, "downTime":null, "upTime":null}
+    };
   }
   else
   {
