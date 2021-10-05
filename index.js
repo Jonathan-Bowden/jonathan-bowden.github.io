@@ -237,7 +237,8 @@ function download(filename, text) {
     //document.body.removeChild(element);
     
     
-    fileText = '';
+    //fileText = '';
+    attempt.value = "";
     textFile = null;
     finalStats ={
                   "dot":{"letter":190, "downTime":null, "upTime":null},"t":{"letter":84, "downTime":null, "upTime":null}, 
