@@ -223,17 +223,18 @@ function download(filename, text) {
     fileText += ','+avgDU;
     fileText += ','+(endTime-startTime);
     fileText += ','+startTime;
+    fileText += '\n';
     //finalStats.foreach(x => );
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileText));
-    element.setAttribute('download', filename);
+    //var element = document.createElement('a');
+    //element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileText));
+    //element.setAttribute('download', filename);
   
-    element.style.display = 'none';
-    document.body.appendChild(element);
+    //element.style.display = 'none';
+    //document.body.appendChild(element);
   
-    element.click();
+    //element.click();
   
-    document.body.removeChild(element);
+    //document.body.removeChild(element);
     
     
     fileText = '';
@@ -256,13 +257,26 @@ function download(filename, text) {
   }
 }
 
+function downloadClick(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+
 window.onload = () => {
   const myInput = document.getElementById('pwrd');
   myInput.onpaste = e => e.preventDefault();
   myInput.ondrop = e => e.preventDefault();
 }
 
-//document.getElementById("dwnld").addEventListener("click", function(){download("hello.csv",fileText);});
+document.getElementById("dwnld").addEventListener("click", function(){downloadClick("data.csv",fileText);});
 
 document.onkeydown = logKeyDown;
 document.onkeyup = logKeyUp;
