@@ -12,6 +12,7 @@ let finalStats ={
                 };
 let fileText = '';
 let pwd = '.tie5Ronal';
+let enrollments = 0;
 var textFile = null;
 var startTime;
 var endTime;
@@ -178,6 +179,7 @@ function logKeyUp(e) {
 
 function download(filename, text) {
   var attempt = document.getElementById("pwrd");
+  var enrollElmnt = document.getElementById("attmpt");
   if (attempt.value == pwd)
   {
     var ddTotal = 0, duTotal = 0, udTotal = 0, uuTotal = 0;
@@ -238,6 +240,8 @@ function download(filename, text) {
     
     
     //fileText = '';
+    enrollments++;
+    enrollElmnt.innerHTML = enrollments;
     attempt.value = "";
     textFile = null;
     finalStats ={
@@ -259,16 +263,19 @@ function download(filename, text) {
 }
 
 function downloadClick(filename, text) {
-  var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-  element.setAttribute('download', filename);
+  if (text != "")
+  {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
 
-  element.style.display = 'none';
-  document.body.appendChild(element);
+    element.style.display = 'none';
+    document.body.appendChild(element);
 
-  element.click();
+    element.click();
 
-  document.body.removeChild(element);
+    document.body.removeChild(element);
+  }
 }
 
 window.onload = () => {
