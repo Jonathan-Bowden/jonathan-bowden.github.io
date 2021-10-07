@@ -242,7 +242,6 @@ function download(filename, text) {
     //fileText = '';
     enrollments++;
     enrollElmnt.innerHTML = enrollments;
-    attempt.value = "";
     textFile = null;
     finalStats ={
                   "dot":{"letter":190, "downTime":null, "upTime":null},"t":{"letter":84, "downTime":null, "upTime":null}, 
@@ -260,6 +259,7 @@ function download(filename, text) {
   {
     window.alert("Password incorrect.");
   }
+  attempt.value = "";
 }
 
 function downloadClick(filename, text) {
