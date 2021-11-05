@@ -16,6 +16,7 @@ let enrollments = 0;
 var textFile = null;
 var startTime;
 var endTime;
+//let ws;
 //var promise = Keyboard.getLayoutMap();
 
 //makeTextFile = function (text)
@@ -25,6 +26,32 @@ var endTime;
 //    window.URL.revokeObjectURL(textFile);
 //  }
 //}
+//let ws = new WebSocket("ws://localhost:8081");
+//var connection = new WrapperWS();
+//
+//socket.onopen = function(e) {
+//  alert("[open] Connection established");
+//  alert("Sending to server");
+//  socket.send("My name is John");
+//};
+//
+//socket.onmessage = function(event) {
+//  alert(`[message] Data received from server: ${event.data}`);
+//};
+//
+//socket.onclose = function(event) {
+//  if (event.wasClean) {
+//    alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+//  } else {
+//    // e.g. server process killed or network down
+//    // event.code is usually 1006 in this case
+//    alert('[close] Connection died');
+//  }
+//};
+//
+//socket.onerror = function(error) {
+//  alert(`[error] ${error.message}`);
+//};
 
 function logKey(e) {
   var keyStat = keyStats.find(function(post, index) {
@@ -225,6 +252,11 @@ function download(filename, text) {
     fileText += ','+avgDU;
     fileText += ','+(endTime-startTime);
     fileText += ','+startTime;
+    //var session = "Test";
+    //this.send(JSON.stringify(fileText), function () {
+    //  window.alert("Data sent");
+    //});
+    ////socket.send(fileText);
     fileText += '\n';
     //finalStats.foreach(x => );
     //var element = document.createElement('a');
@@ -288,3 +320,30 @@ document.getElementById("dwnld").addEventListener("click", function(){downloadCl
 
 document.onkeydown = logKeyDown;
 document.onkeyup = logKeyUp;
+
+//this.send = function (message, callback) {
+//  this.waitForConnection(function () {
+//      ws.send(message);
+//      if (typeof callback !== 'undefined') {
+//        callback();
+//      }
+//  }, 1000);
+//};
+//
+//this.waitForConnection = function (callback, interval) {
+//  if (ws.readyState === 1) {
+//      callback();
+//  } else {
+//      var that = this;
+//      // optional: implement backoff for interval here
+//      setTimeout(function () {
+//          that.waitForConnection(callback, interval);
+//      }, interval);
+//  }
+//};
+//
+//function init(){
+//  ws = new WebSocket("ws://localhost:8081/");
+//}
+//
+//window.addEventListener("load", init, false);
