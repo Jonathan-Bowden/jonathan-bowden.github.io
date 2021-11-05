@@ -1,0 +1,60 @@
+#import the libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import re
+
+#read the dataset
+data=pd.read_csv("train.csv")
+
+#analyze dataset
+data.head()
+print(data.shape)
+data.columns
+print(data.info())
+data.describe()
+
+#lets transform some data
+#break the name field to get meaningful information like Mr, Mrs, miss, special etc
+data.Name.tail()
+#extract anything have a dot at the end into Title
+data['Title'] = data.Name.apply(lambda x: re.search(' ([A-Z][a-z]+)\.', x).group(1))
+
+#replace title now
+data['Title'] = data['Title'].replace({'Mlle':'Miss', 'Mme':'Mrs', 'Ms':'Miss'})
+data['Title'] = data['Title'].replace(['Don', 'Dona', 'Rev', 'Dr','Major', 'Lady', 'Sir', 'Col', 'Capt', 'Countess', 'Jonkheer'],'Special')
+
+#also insert a new colun 'Has_cabin' 
+data['Has_Cabin'] = ~data.Cabin.isnull()
+
+data.tail()
+
+#notice there are many data where age is not given
+#fill the age with median value. 
+#lets do the same with fare
+#lets do the same with Emabrked - missing with 'S'
+
+data['Age'] = data.Age.fillna(data.Age.median())
+data['Fare'] = data.Fare.fillna(data.Fare.median())
+data['Embarked'] = data['Embarked'].fillna('S')
+
+#lets drop some useless data
+data.drop(['Cabin', 'Name', 'PassengerId', 'Ticket'], axis=1, inplace=True)
+
+#let us categorize the age and fare so that it helps in analysis
+# Binning numerical columns
+data['CatAge'] = pd.qcut(data.Age, q=4, labels=False )
+data['CatFare']= pd.qcut(data.Fare, q=4, labels=False)
+
+#now we may drop fare and age as we have the data we need
+data = data.drop(['Age', 'Fare'], axis=1)
+
+# Create column of number of Family members onboard
+data['Fam_Size'] = data.Parch + data.SibSp
+
+# now to do 
+# create a column sex_male and fill wit 0 or 1
+#drop sex
+#change the Embarked column to a numeric value as well
+
