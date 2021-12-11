@@ -8,3 +8,7 @@
 8 Oleg Other Friend
 9 Dudej
 10 Shane
+11 Kushan
+
+ExtraTreesClassifier
+51 features compared to reduced feature set
